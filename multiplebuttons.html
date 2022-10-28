@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        position: absolute;
+        height: 400px;
+    }
+
+    button{
+        position: absolute;
+        top: 515px;
+    }
+    
+
+
+</style>
+<body>
+    <h1>Images of Denver from 2004(before), 2005(another), and 2009 (after)</h1>
+        <img id='after' src="./png/trueColor09.png" alt="">
+        <img id= 'another' src="./png/trueColor05.png" alt="">
+        <img id= 'before' src="./png/trueColor04.png" alt="">
+        <button style = "left:10px" onclick= "myFunction('after')">after</button>
+        <button style = "left:100px" onclick= "myFunction('another')">another</button>
+        <button style = "left:200px" onclick= "myFunction('before')">before</button>
+    <script>
+       
+            function myFunction(id){
+                var imgs= document.getElementsByTagName('img')
+                for(var i=0; i<imgs.length; i++){
+                    imgs[i].style.visibility='hidden'
+                }
+                var daImg = document.getElementById(id)
+                daImg.style.visibility= "visible"
+            }
+
+
+
+    </script>
+</body>
+</html>
